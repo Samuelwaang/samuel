@@ -2,21 +2,21 @@
   
     
         "post0": {
-            "title": "Title",
-            "content": "msg = &quot;hi&quot; print(msg) . hi .",
-            "url": "https://samuelwaang.github.io/samuel/2022/08/20/notebook.html",
-            "relUrl": "/2022/08/20/notebook.html",
-            "date": " • Aug 20, 2022"
+            "title": "random post",
+            "content": "hi . I’m samuel .",
+            "url": "https://samuelwaang.github.io/samuel/markdown/2022/08/19/random-post.html",
+            "relUrl": "/markdown/2022/08/19/random-post.html",
+            "date": " • Aug 19, 2022"
         }
         
     
   
     
         ,"post1": {
-            "title": "random post",
-            "content": "hi . I’m samuel .",
-            "url": "https://samuelwaang.github.io/samuel/markdown/2022/08/19/random-post.html",
-            "relUrl": "/markdown/2022/08/19/random-post.html",
+            "title": "Title",
+            "content": "msg = &quot;hi&quot; print(msg) . hi .",
+            "url": "https://samuelwaang.github.io/samuel/2022/08/19/python-notebook.html",
+            "relUrl": "/2022/08/19/python-notebook.html",
             "date": " • Aug 19, 2022"
         }
         
