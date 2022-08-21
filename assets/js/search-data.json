@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": "&quot;Python Notebook&quot; . toc:false- badges: true | comments: true | author: Samuel | categories: [fastpages, jupyter] | . python notebook . msg = &quot;hi&quot; print(msg) . hi .",
-            "url": "https://samuelwaang.github.io/samuel/2022/08/19/python-notebook.html",
-            "relUrl": "/2022/08/19/python-notebook.html",
+            "title": "Python Notebook",
+            "content": "msg = &quot;hi&quot; print(msg) . hi .",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/19/python-notebook.html",
+            "relUrl": "/fastpages/jupyter/2022/08/19/python-notebook.html",
             "date": " • Aug 19, 2022"
         }
         
@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Title",
-            "content": "&quot;Java Notebook&quot; . toc:false- badges: true | comments: true | author: Samuel | categories: [fastpages, jupyter] | . java notebook . public class HelloStatic { public static void main(String[] args) { System.out.println(&quot;Hi&quot;); } } HelloStatic.main(null); . Hi .",
-            "url": "https://samuelwaang.github.io/samuel/2022/08/19/java-notebook.html",
-            "relUrl": "/2022/08/19/java-notebook.html",
+            "title": "Java Notebook",
+            "content": "public class HelloStatic { public static void main(String[] args) { System.out.println(&quot;Hi&quot;); } } HelloStatic.main(null); . Hi .",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/19/java-notebook.html",
+            "relUrl": "/fastpages/jupyter/2022/08/19/java-notebook.html",
             "date": " • Aug 19, 2022"
         }
         
