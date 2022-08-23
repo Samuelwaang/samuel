@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Python Notebook",
-            "content": "msg = &quot;hi&quot; print(msg) . hi . def keypad (): matrix = [ [1,2,3],[4,5,6],[7,8,9] ] for num2 in matrix: for num1 in num2: print (num1, end=&quot; &quot;) print() . hi .",
+            "content": "msg = &quot;hi&quot; print(msg) . hi . A simple keypad made with a for loop we made last school year. . matrix = [ [1,2,3],[4,5,6],[7,8,9] ] for num2 in matrix: for num1 in num2: print (num1, end=&quot; &quot;) print() . hi .",
             "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/19/python-notebook.html",
             "relUrl": "/fastpages/jupyter/2022/08/19/python-notebook.html",
             "date": " • Aug 19, 2022"
