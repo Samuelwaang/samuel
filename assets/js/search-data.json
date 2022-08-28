@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "Bash Notebook Installations",
+            "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode # change vscode to different name to test git clone export project=$project_dir/samuel # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/Samuelwaang/samuel&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Using conditional statement to create a project directory and project Directory /home/samuelwaang/vscode exists. Directory /home/samuelwaang/vscode/samuel exists. . Python Versions . python2 --version python3 --version . Python 2.7.18 Python 3.9.12 . Java Versions . java --version javac --version . openjdk 11.0.16 2022-07-19 OpenJDK Runtime Environment (build 11.0.16+8-post-Ubuntu-0ubuntu120.04) OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu120.04, mixed mode, sharing) javac 11.0.16 . Kernels . jupyter kernelspec list . Available kernels: bash /home/samuelwaang/.local/share/jupyter/kernels/bash java /home/samuelwaang/.local/share/jupyter/kernels/java javascript /home/samuelwaang/.local/share/jupyter/kernels/javascript python3 /home/samuelwaang/.local/share/jupyter/kernels/python3 .",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/25/bash-notebook.html",
+            "relUrl": "/fastpages/jupyter/2022/08/25/bash-notebook.html",
+            "date": " • Aug 25, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "random post",
             "content": "hi . I’m samuel .",
             "url": "https://samuelwaang.github.io/samuel/markdown/2022/08/19/random-post.html",
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "Python Notebook",
             "content": "msg = &quot;hi&quot; print(msg) . hi . A simple keypad made with a for loop we made last school year. . matrix = [ [1,2,3],[4,5,6],[7,8,9] ] for num2 in matrix: for num1 in num2: print (num1, end=&quot; &quot;) print() . 1 2 3 4 5 6 7 8 9 .",
             "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/19/python-notebook.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Java Notebook",
             "content": "public class HelloStatic { public static void main(String[] args) { System.out.println(&quot;Hi&quot;); } } HelloStatic.main(null); . Hi .",
             "url": "https://samuelwaang.github.io/samuel/fastpages/jupyter/2022/08/19/java-notebook.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "An Example Markdown Post",
             "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
             "url": "https://samuelwaang.github.io/samuel/markdown/2020/01/14/test-markdown-post.html",
