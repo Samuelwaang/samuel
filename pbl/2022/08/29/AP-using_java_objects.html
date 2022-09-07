@@ -231,9 +231,7 @@ window.onload = wrap_img;
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">significantDigits</span><span class="p">(</span><span class="n">BigDecimal</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">input</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">stripTrailingZeros</span><span class="p">();</span>
-        <span class="k">return</span> <span class="n">input</span><span class="p">.</span><span class="na">scale</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span>
-            <span class="o">?</span> <span class="n">input</span><span class="p">.</span><span class="na">precision</span><span class="p">()</span> <span class="o">-</span> <span class="n">input</span><span class="p">.</span><span class="na">scale</span><span class="p">()</span>
-            <span class="p">:</span> <span class="n">input</span><span class="p">.</span><span class="na">precision</span><span class="p">();</span> 
+        <span class="k">return</span> <span class="n">input</span><span class="p">.</span><span class="na">scale</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">input</span><span class="p">.</span><span class="na">precision</span><span class="p">()</span> <span class="o">-</span> <span class="n">input</span><span class="p">.</span><span class="na">scale</span><span class="p">()</span> <span class="p">:</span> <span class="n">input</span><span class="p">.</span><span class="na">precision</span><span class="p">();</span> <span class="c1">// if input.scale is less than 0 (which would be the sig figs after the decimal point), then it subtracts input scale from input precision, which is the number of digits. Other wise it just sticks with input precision.</span>
     <span class="p">}</span>
 
 
