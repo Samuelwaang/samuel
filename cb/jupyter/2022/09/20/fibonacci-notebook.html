@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -308,10 +308,10 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhileLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
 
     <span class="kd">public</span> <span class="nf">WhileLoop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="c1">//iterates 8 times</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="nf">WhileLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">WhileLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//makes arrays, establishes nth term</span>
         <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -319,18 +319,18 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
         <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
     <span class="p">}</span>
 
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//while loop making</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;While&quot;</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">long</span><span class="o">[]</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
 
-        <span class="k">while</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">&gt;=</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">while</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">&gt;=</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// while it has iterated less than or equal to 8 times, it iterates again</span>
             <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">w</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">w</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">w</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span> <span class="c1">// add terms to array</span>
             <span class="n">num</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//prints it</span>
         <span class="n">WhileLoop</span> <span class="n">whileprint</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">WhileLoop</span><span class="p">();</span>
         <span class="n">whileprint</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
     <span class="p">}</span>
@@ -385,13 +385,13 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Recursion</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Recursion</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//iterates 8 times</span>
         <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Recursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//makes arrays, establishes nth term</span>
         <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -399,29 +399,30 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
         <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
     <span class="p">}</span>
 
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">recur</span><span class="p">(</span><span class="kt">long</span><span class="o">[]</span> <span class="n">f</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-        <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">recur</span><span class="p">(</span><span class="kt">long</span><span class="o">[]</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//starts at first term and adds a new term, keeps doing this over and over again if it iterated less than 8 times </span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">r</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">r</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">r</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">r</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
         <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
         
     <span class="p">}</span>
 
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// starts at 0, repeats</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;Recursion&quot;</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">long</span><span class="o">[]</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ForLoop</span> <span class="n">rFib</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">ForLoop</span><span class="p">();</span>
-        <span class="n">rFib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>  
 
-<span class="n">ForLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//prints</span>
+        <span class="n">Recursion</span> <span class="n">recursionprint</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">Recursion</span><span class="p">();</span>
+        <span class="n">recursionprint</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Recursion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -472,11 +473,11 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
 
-    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//iterates 8 times</span>
         <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//makes arrays, establishes nth term</span>
         <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -484,16 +485,16 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
         <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
     <span class="p">}</span>
 
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> 
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;For Loop&quot;</span><span class="p">;</span>
         <span class="kt">long</span><span class="o">[]</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
    
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">num</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">num</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//uses for loop to iterate up to 8 times, adding a term each time</span>
             <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
             <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//prints</span>
         <span class="n">ForLoop</span> <span class="n">forprint</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">ForLoop</span><span class="p">();</span>
         <span class="n">forprint</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
     <span class="p">}</span>
@@ -534,6 +535,20 @@ fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1B</p>
+<ul>
+<li>The loops that we learned in these can all be used in our CB frqs. The while loop, for loop, and recursion are all useful
+4C</li>
+<li>All the types of iteration all have the same output. They are all doing the same thing just in a different way, which could change how long each one takes, but not the output.
+5A</li>
+<li>Recursion uses if-else, while loops use while, and for loops use for.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
