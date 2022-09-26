@@ -27,10 +27,10 @@ categories: [markdown]
         var third = document.getElementById("val3");
         var period = document.getElementById("period");
         var score = document.getElementById("score");
-        var name = first + " " + second;
-        var name1 = name + " " + third;
+        var name = first.concat(second);
+        var name1 = name.concat(third);
         var output = document.querySelector("#output tbody");
-        output.innerHTML += "<tr><td>"+name.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
+        output.innerHTML += "<tr><td>"+name1.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
     }
 </script> 
 
