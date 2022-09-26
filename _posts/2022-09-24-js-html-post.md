@@ -13,7 +13,7 @@ categories: [markdown]
         var third = getElementById("val3");
         var period = getElementById("period");
         var score = getElementById("score");
-        var name = first + " " + second + " " + third + " ";
+        var name = first + " " + second + " " + third;
         var output = document.querySelector("#output tbody");
         output.innerHTML += "<tr><td>"+name.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
     }
@@ -48,6 +48,7 @@ categories: [markdown]
             <thead><td>Name</td><td>Period</td><td>Score</td></thead>
             <tbody></tbody>
         </table>
+    </div>    
 </body>
 
  
