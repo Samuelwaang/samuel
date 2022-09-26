@@ -96,25 +96,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-</ul><div>
-<input id="val1" type="text" placeholder="Enter your first name">
-<input id="val2" type="text" placeholder="Enter your middle name">
-<input id="val3" type="text" placeholder="Enter your last name">
-<input id="period" type="text" placeholder="Enter your last name">
-<input id="score" type="text" placeholder="Input your score for this week">
-<input type="button" onclick="add();" value="Add">
-<div>
-<table id="output">
-    <thead>
-        <td>Name</td>
-        <td>Surname</td>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-
-<p>
-
+</ul><body>
 <script>
     function table() {
         var first = getElementById("val1");
@@ -122,14 +104,52 @@ window.onload = wrap_img;
         var third = getElementById("val3");
         var period = getElementById("period");
         var score = getElementById("score");
+        var name = first + " " + second + " " + third + " ";
         var output = document.querySelector("#output tbody");
-        output.innerHTML += "<tr><td>"+name.value+"</td><td>"+surname.value+"</td></tr>"
+        output.innerHTML += "<tr><td>"+name.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
     }
-</script>    
-</p>
-</div>
-</div>
+</script>
 
+
+    <form action="">
+        <div>
+            <label for="name">First Name</label>
+            <input type="text" id="val1">
+        </div>
+        <div>
+            <label for="name">Middle Name</label>
+            <input type="text" id="val2">
+        </div>
+        <div>
+            <label for="name">Last Name</label>
+            <input type="text" id="val3">
+        </div>
+        <div>
+            <label for="name">Period</label>
+            <input type="text" id="period">
+        </div>
+        <div>
+            <label for="name">Score</label>
+            <input type="text" id="score">
+        </div>
+    </form>
+    <input type="button" onclick="table();" value="Add">
+    <div>
+        <table id="output">
+            <thead>
+<td>Name</td>
+<td>Period</td>
+<td>Score</td>
+</thead>
+            <tbody></tbody>
+        </table>
+&lt;/body&gt;
+
+ 
+
+   
+</div>
+</body>
   </div><a class="u-url" href="/samuel/markdown/2022/09/24/js-html-post.html" hidden></a>
 </article>
 
