@@ -6,13 +6,27 @@ description: javascript html frontend
 categories: [markdown]
 ---
 
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
 <script>
     function table() {
-        var first = getElementById("val1");
-        var second = getElementById("val2");
-        var third = getElementById("val3");
-        var period = getElementById("period");
-        var score = getElementById("score");
+        var first = document.getElementById("val1");
+        var second = document.getElementById("val2");
+        var third = document.getElementById("val3");
+        var period = document.getElementById("period");
+        var score = document.getElementById("score");
         var name = first + " " + second + " " + third;
         var output = document.querySelector("#output tbody");
         output.innerHTML += "<tr><td>"+name.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
