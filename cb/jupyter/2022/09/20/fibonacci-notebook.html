@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -140,6 +140,12 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Basic-Fibonacci-Code">Basic Fibonacci Code<a class="anchor-link" href="#Basic-Fibonacci-Code"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -170,7 +176,7 @@ window.onload = wrap_img;
 <span class="cm">     @param: none</span>
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span> <span class="c1">// telescope to avoid code duplication, using default as 20</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="c1">// telescope to avoid code duplication, using default as 20</span>
     <span class="p">}</span>
 
     <span class="cm">/*</span>
@@ -258,9 +264,9 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Init method = Stream
-fibonacci Number 20 = 4181
-fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13], 8=[0, 1, 1, 2, 3, 5, 8, 13, 21], 9=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34], 10=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55], 11=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], 12=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144], 13=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233], 14=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 15=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610], 16=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987], 17=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597], 18=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584], 19=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]}
+fibonacci Number 8 = 13
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13]}
 fibonacci Sequence 1 = [0]
 fibonacci Sequence 2 = [0, 1]
 fibonacci Sequence 3 = [0, 1, 1]
@@ -269,18 +275,255 @@ fibonacci Sequence 5 = [0, 1, 1, 2, 3]
 fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
 fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
 fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
-fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
-fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-fibonacci Sequence 11 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-fibonacci Sequence 12 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-fibonacci Sequence 13 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
-fibonacci Sequence 14 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
-fibonacci Sequence 15 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
-fibonacci Sequence 16 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
-fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
-fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
-fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="hacks-without-reproducing-same-lines-of-code">hacks without reproducing same lines of code<a class="anchor-link" href="#hacks-without-reproducing-same-lines-of-code"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>While Loop</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhileLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">WhileLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">WhileLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;While&quot;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+
+        <span class="k">while</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">&gt;=</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">w</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">w</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">w</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+            <span class="n">num</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WhileLoop</span> <span class="n">whileprint</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">WhileLoop</span><span class="p">();</span>
+        <span class="n">whileprint</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>  
+
+<span class="n">WhileLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = While
+fibonacci Number 8 = 13
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13], 8=[0, 1, 1, 2, 3, 5, 8, 13, 21]}
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Recursion</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">recur</span><span class="p">(</span><span class="kt">long</span><span class="o">[]</span> <span class="n">f</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;Recursion&quot;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">recur</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ForLoop</span> <span class="n">rFib</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">ForLoop</span><span class="p">();</span>
+        <span class="n">rFib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>  
+
+<span class="n">ForLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = Recursion
+fibonacci Number 8 = 13
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13]}
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For Loop</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForLoop</span> <span class="kd">extends</span> <span class="n">Fibo</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">ForLoop</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;For Loop&quot;</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+   
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">num</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ForLoop</span> <span class="n">forprint</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">ForLoop</span><span class="p">();</span>
+        <span class="n">forprint</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>  
+
+<span class="n">ForLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = For Loop
+fibonacci Number 8 = 13
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Hashmap = {0=[0], 1=[0, 1], 2=[0, 1, 1], 3=[0, 1, 1, 2], 4=[0, 1, 1, 2, 3], 5=[0, 1, 1, 2, 3, 5], 6=[0, 1, 1, 2, 3, 5, 8], 7=[0, 1, 1, 2, 3, 5, 8, 13], 8=[0, 1, 1, 2, 3, 5, 8, 13, 21]}
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
 </pre>
 </div>
 </div>
