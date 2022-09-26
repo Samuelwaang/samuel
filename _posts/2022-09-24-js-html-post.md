@@ -23,30 +23,19 @@ categories: [markdown]
 <script>
     function table() {
         var first = document.getElementById("val1");
-        var second = document.getElementById("val2");
-        var third = document.getElementById("val3");
         var period = document.getElementById("period");
         var score = document.getElementById("score");
-        var name = first.concat(second);
-        var name1 = name.concat(third);
+
         var output = document.querySelector("#output tbody");
-        output.innerHTML += "<tr><td>"+name1.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
+        output.innerHTML += "<tr><td>"+first.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
     }
 </script> 
 
 <body>
     <form action="">
         <div>
-            <label for="name">First Name</label>
+            <label for="name">Full Name</label>
             <input type="text" id="val1">
-        </div>
-        <div>
-            <label for="name">Middle Name</label>
-            <input type="text" id="val2">
-        </div>
-        <div>
-            <label for="name">Last Name</label>
-            <input type="text" id="val3">
         </div>
         <div>
             <label for="name">Period</label>
