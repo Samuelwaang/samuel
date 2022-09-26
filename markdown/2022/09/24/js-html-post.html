@@ -97,13 +97,24 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 </ul><body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+
 <script>
     function table() {
-        var first = getElementById("val1");
-        var second = getElementById("val2");
-        var third = getElementById("val3");
-        var period = getElementById("period");
-        var score = getElementById("score");
+        var first = document.getElementById("val1");
+        var second = document.getElementById("val2");
+        var third = document.getElementById("val3");
+        var period = document.getElementById("period");
+        var score = document.getElementById("score");
         var name = first + " " + second + " " + third;
         var output = document.querySelector("#output tbody");
         output.innerHTML += "<tr><td>"+name.value+"</td><td>"+period.value+"</td><td>"+score.value+"</td></tr>"
