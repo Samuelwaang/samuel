@@ -37,7 +37,7 @@ public class GradeCalculator {
             b = b/100;
             double total = (e/(d+e))*c; //final is this percent of the total grade
             double needed = (e*(b-a))/total;
-            System.out.println("points needed: " + needed * 10000);
+            System.out.println("points needed: " + needed * 10000); //no idea how to do this second part
 
 
         }
