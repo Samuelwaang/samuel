@@ -6,7 +6,15 @@ description: javascript html frontend update
 categories: [markdown]
 ---
 
+<style>
+    head {
+        font-size: 40px;
+        text-align: center;
+    }
+</style>
+
 <head>
+    <label for = "pop">World Population:</label>
     <p id = "pop"> world population </p>
 </head>
 
@@ -23,7 +31,6 @@ const options = {
 fetch('https://get-population.p.rapidapi.com/population', options)
     .then(response => response.json())
     .then(response => {
-        console.log(response);
         console.log(response.count);
         document.getElementById("pop").innerHTML = response.count;
     })
