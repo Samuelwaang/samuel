@@ -34,13 +34,13 @@ fetch('https://get-population.p.rapidapi.com/population', options)
         console.log(response.count);
         document.getElementById("pop").innerHTML = response.count;
     })
-    
+
     .catch(err => console.error(err));
 
 change();
 
 function change() {
-    document.getElementById("pop").innerHTML = parseInt(document.getElementById("pop").innerHTML) + 3;
+    document.getElementById("pop").innerHTML = parseFloat(document.getElementById("pop").innerHTML) + 3;
 }
 
 setInterval(change,1000);        
