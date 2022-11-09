@@ -30,6 +30,7 @@ categories: [markdown]
 
     change();
     function change() {
-        document.getElementById("pop").innerHTML = parseInt(document.getElementById("pop").innerHTML) + 3;    
+        document.getElementById("pop").innerHTML = parseInt(document.getElementById("pop").innerHTML) + 3;
+    } setInterval(update,1000);        
 </script>
 
