@@ -15,16 +15,16 @@ const options = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
-        'X-RapidAPI-Host': 'world-population.p.rapidapi.com'
+        'X-RapidAPI-Host': 'get-population.p.rapidapi.com'
     }
 };
 
 
-fetch('https://world-population.p.rapidapi.com/allcountriesname', options)
+fetch('https://get-population.p.rapidapi.com/population', options)
     .then(response => response.json())
     .then(response => {
-        console.log(response);
-        document.getElementById("pop").innerHTML = response;
+        console.log(response[0].count);
+        document.getElementById("pop").innerHTML = response[0].count;
     })
     .catch(err => console.error(err));
 
