@@ -31,6 +31,6 @@ fetch('https://get-population.p.rapidapi.com/population', options)
 change();
 function change() {
     document.getElementById("pop").innerHTML = parseInt(document.getElementById("pop").innerHTML) + 3;
-} setInterval(update,1000);        
+} setInterval(change,1000);        
 </script>
 
