@@ -23,6 +23,7 @@ const options = {
 fetch('https://get-population.p.rapidapi.com/population', options)
     .then(response => response.json())
     .then(response => {
+        console.log(response);
         console.log(response[0].count);
         document.getElementById("pop").innerHTML = response[0].count;
     })
