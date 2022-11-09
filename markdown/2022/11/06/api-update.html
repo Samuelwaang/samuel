@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Javascript test | fastpages</title>
+<title>frontend api update | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Javascript test" />
+<meta property="og:title" content="frontend api update" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="javascript html frontend" />
-<meta property="og:description" content="javascript html frontend" />
+<meta name="description" content="javascript html frontend update" />
+<meta property="og:description" content="javascript html frontend update" />
 <link rel="canonical" href="https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html" />
 <meta property="og:url" content="https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-11-06T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Javascript test" />
+<meta property="twitter:title" content="frontend api update" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-06T00:00:00-05:00","datePublished":"2022-11-06T00:00:00-05:00","description":"javascript html frontend","headline":"Javascript test","mainEntityOfPage":{"@type":"WebPage","@id":"https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html"},"url":"https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-06T00:00:00-05:00","datePublished":"2022-11-06T00:00:00-05:00","description":"javascript html frontend update","headline":"frontend api update","mainEntityOfPage":{"@type":"WebPage","@id":"https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html"},"url":"https://samuelwaang.github.io/samuel/markdown/2022/11/06/api-update.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/samuel/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://samuelwaang.github.io/samuel/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/samuel/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Javascript test</h1><p class="page-description">javascript html frontend</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-06T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">frontend api update</h1><p class="page-description">javascript html frontend update</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-06T00:00:00-05:00" itemprop="datePublished">
         Nov 6, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -96,19 +96,31 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-</ul><script>
-    // Clock Control
-    // clockElement global element set for convenience
-    let clockElement = document.getElementById('clock')
-    // Execute clock function on load
-    clock();
-    // Clock update executes on each interval set by timer
-    function clock() {
-        let date = new Date();
-        clockElement.textContent = date.toLocaleString();
-    }
-    // Clock refresh timer, a reoccurring event
-    setInterval(clock, 1000);
+</ul>
+    <p id="pop"> world population </p>
+
+
+<script>
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
+            'X-RapidAPI-Host': 'world-population.p.rapidapi.com'
+        }
+    };
+
+
+    fetch('https://world-population.p.rapidapi.com/allcountriesname', options)
+        .then(response => response.json())
+        .then(response => 
+            console.log(response);
+            document.getElementById("pop").innerHTML = response;
+        )
+        .catch(err => console.error(err));
+
+    change();
+    function change() {
+        document.getElementById("pop").innerHTML = parseInt(document.getElementById("pop").innerHTML) + 3;    
 </script>
 
 
