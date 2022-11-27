@@ -24,24 +24,24 @@ public class GradeCalculator {
         }
         else {
             System.out.println("current grade?: ");
-            double a = input.nextDouble();
-            System.out.println("desired grade: ");
-            double b = input.nextDouble();
-            System.out.println("test category %: ");
-            double c = input.nextDouble();
+            double cg = input.nextDouble();
+            System.out.println("% of grade that is in the test category %: ");
+            double tp = input.nextDouble();
+            System.out.println("current test grade: ");
+            double tg = input.nextDouble();  
             System.out.println("points in test category: ");
-            double d = input.nextDouble();
+            double tpt = input.nextDouble();
             System.out.println("points in the final: ");
-            double e = input.nextDouble();   
-            a = a/100;
-            b = b/100;
-            double total = (e/(d+e))*c; //final is this percent of the total grade
-            double needed = (e*(b-a))/total;
-            System.out.println("points needed: " + needed * 10000); //no idea how to do this second part
+            double fp = input.nextDouble(); 
+            System.out.println("desired grade: ");
+            double dg = input.nextDouble();
 
-
+            Double otherPoint = cg - (tg*(tp/100));
+            Double needed = (((dg - otherPoint) * (tpt+fp))/tp)-tg;
+            System.out.print("You need " + needed + " points on the test");
         }
 
     }
 }
-GradeCalculator.main(null);
+
+
