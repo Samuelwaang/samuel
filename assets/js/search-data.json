@@ -48,8 +48,8 @@
         ,"post4": {
             "title": "Objects HW",
             "content": ". FRQs . a) . public int scoreGuess( String guess ) { int val = 0; int len = guess.length(); for( int i = 0; i &lt;= secret.length()-len; i+=1) { String ck = secret.substring( i, i+len ); if( ck.equals(guess) ) val++; } return val*len*len; } . b) . public String findBetterGuess(String guess1, String guess2 ) { int a = scoreGuess( guess1 ); int b = scoreGuess( guess2 ); if( a &gt; b ) return guess1; if( b &gt; a ) return guess2; if( guess1.compareTo( guess2 ) &gt; 0 ) return guess1; return guess2; } .",
-            "url": "https://samuelwaang.github.io/samuel/fastpages/cb/hw/2022/10/23/objects-hw.html",
-            "relUrl": "/fastpages/cb/hw/2022/10/23/objects-hw.html",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/pbl/2022/10/23/objects-hw.html",
+            "relUrl": "/fastpages/pbl/2022/10/23/objects-hw.html",
             "date": " • Oct 23, 2022"
         }
         
@@ -59,8 +59,8 @@
         ,"post5": {
             "title": "Iteration HW",
             "content": "public class CaesarCipher { public static void main(String[] args) { String[] letters = {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;, &quot;i&quot;, &quot;j&quot;, &quot;k&quot;, &quot;l&quot;, &quot;m&quot;, &quot;n&quot;, &quot;o&quot;, &quot;p&quot;, &quot;q&quot;, &quot;r&quot;, &quot;s&quot;, &quot;t&quot;, &quot;u&quot;, &quot;v&quot;, &quot;w&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;}; String message1 = &quot;Kfzb gly!&quot;; String message2 = &quot;zlab zlab zlab&quot;; String message3 = &quot;prmbozxifcoxdfifpqfzbumfxifalzflrp&quot;; ArrayList&lt;String&gt; caesar = new ArrayList&lt;String&gt;(); for (int i = 0; i &lt; letters.length; i++) { int d = 0; if (i &lt; 23) { caesar.add(letters[i+3]); } else { caesar.add(letters[i+3-26]); } } String message11 = &quot; &quot;; for (char c : message1.toCharArray()) { message11 += Character.toString((char) (((c - &#39;a&#39; + 3) % 26) + &#39;a&#39;)); } String message22 = &quot; &quot;; for (char c : message2.toCharArray()) { message22 += Character.toString((char) (((c - &#39;a&#39; + 3) % 26) + &#39;a&#39;)); } String message33 = &quot; &quot;; for (char c : message3.toCharArray()) { message33 += Character.toString((char) (((c - &#39;a&#39; + 3) % 26) + &#39;a&#39;)); } System.out.println(caesar); System.out.println(message11); System.out.println(message22); System.out.println(message33); } } CaesarCipher.main(null); . [d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a, b, c] NiceWjobX codeWcodeWcode supercalifragilisticexpialidocious .",
-            "url": "https://samuelwaang.github.io/samuel/fastpages/cb/hw/2022/10/22/iteration-lesson.html",
-            "relUrl": "/fastpages/cb/hw/2022/10/22/iteration-lesson.html",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/pbl/2022/10/22/iteration-lesson.html",
+            "relUrl": "/fastpages/pbl/2022/10/22/iteration-lesson.html",
             "date": " • Oct 22, 2022"
         }
         
@@ -70,8 +70,8 @@
         ,"post6": {
             "title": "boolean HW",
             "content": ". FRQ . a) . public static int numberOfLeapYears(int year1, int year2) { int cnt = 0; for (int y=year1; y&lt;=year2; y++) { if (isLeapYear(y)) { cnt++; } } return cnt; } . b) . public static int dayOfWeek(int month, int day, int year) { int firstDay = firstDayOfYear(year); int doy = dayOfYear(month, day, year); return (firstDay + doy - 1) % 7; } . Conditional Exercises . 2 . public class main { public static void main(String[] Strings) { double a = 1; double b = 3; double c = 2; double result = b * b - 4.0 * a * c; if (result &gt; 0.0) { double r1 = (-b + Math.pow(result, 0.5)) / (2.0 * a); double r2 = (-b - Math.pow(result, 0.5)) / (2.0 * a); System.out.println(&quot;The roots are &quot; + r1 + &quot; and &quot; + r2); } else if (result == 0.0) { double r1 = -b / (2.0 * a); System.out.println(&quot;The root is &quot; + r1); } else { System.out.println(&quot;The equation has no real roots.&quot;); } } } main.main(null) . The roots are -1.0 and -2.0 . 4 . public class main { public static void main(String[] Strings) { double a = 1; if (a &gt; 0.0) { System.out.println(&quot;positive number&quot;); } else { System.out.println(&quot;negative number&quot;); } } } main.main(null) . positive number . 6 . public class main { public static void main(String[] Strings) { double a = 55.1321; double b = 55.132; a = Math.round(a * 1000); b = Math.round(b * 1000); if (a == b) { System.out.println(&quot;same&quot;); } else { System.out.println(&quot;different&quot;); } } } main.main(null) . same . 8 . public class main { public static void main(String[] Strings) { String a = &quot;a&quot;; boolean vowels = a.equals(&quot;a&quot;) || a.equals(&quot;e&quot;) || a.equals(&quot;i&quot;) || a.equals(&quot;o&quot;) || a.equals(&quot;u&quot;); if (a.length() &gt; 1) { System.out.println(&quot;not one letter&quot;); } else if (vowels) { System.out.println(&quot;vowel&quot;); } else { System.out.println(&quot;consonant&quot;); } } } main.main(null) . vowel . 10 . public class main { public static void main(String[] args) { int i; for (i=1;i&lt;=10;i++) { System.out.println (i); } } } main.main(null) . 1 2 3 4 5 6 7 8 9 10 . 12 . public class main { public static void main(String[] args) { int a = 3; int b = 4; int c = 1; int d = 7; int e = 3; double sum = a + b + c + d + e; double avg = sum/5; System.out.println(sum); System.out.println(avg); } } main.main(null) . 18.0 3.6 . 14 . public class main { public static void main(String[] args) { int a = 4; int b = 3; int i; for(i = 0; i &lt;= b; i++) { int c = a * i; System.out.println(a + &quot; * &quot; + i + &quot; = &quot; + c); c = 0; } } } main.main(null) . 4 * 0 = 0 4 * 1 = 4 4 * 2 = 8 4 * 3 = 12 . 16 . public class main { public static void main(String[] args) { int a; int b; int r = 5; for(a=1;a&lt;=r;a++) { for(b=1;b&lt;=a;b++) System.out.print(b); System.out.println(&quot;&quot;); } } } main.main(null); . 1 12 123 1234 12345 . 18 . public class main { public static void main(String[] args) { int a,b,c=1; int n = 4; for(a=1;a&lt;=n;a++) { for(b=1;b&lt;=a;b++) System.out.print(c++); System.out.println(&quot; &quot;); } } } main.main(null); . 1 23 456 78910 . 20 . public class main { public static void main(String[] args) { int a,b,c=1; int n = 5; for(a=1;a&lt;=n;a++) { for(b=1;b&lt;=a;b++) System.out.print(&quot; &quot; + c++); System.out.println(&quot; &quot;); } } } main.main(null); . 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 . String[] names = new String[] {&quot;samuel&quot;, &quot;kian&quot;, &quot;samuel&quot;, &quot;bob&quot;}; for(int i = 0; i &lt; names.length; i++ ) { for(int j = 0; j &lt; names.length; j++) { if(names[i]==names[j]) { System.out.println(names[j]); } } } . samuel samuel kian samuel samuel bob .",
-            "url": "https://samuelwaang.github.io/samuel/fastpages/cb/hw/2022/10/22/conditionals.html",
-            "relUrl": "/fastpages/cb/hw/2022/10/22/conditionals.html",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/pbl/2022/10/22/conditionals.html",
+            "relUrl": "/fastpages/pbl/2022/10/22/conditionals.html",
             "date": " • Oct 22, 2022"
         }
         
@@ -81,8 +81,8 @@
         ,"post7": {
             "title": "Classes HW",
             "content": "public class StepTracker { private int days; private int activeDays; private int totalSteps; private int minActive; public StepTracker(int m) { minActive = m; days = 0; activeDays = 0; totalSteps = 0; } public int activeDays() { return activeDays; } public double averageSteps() { if (days == 0) { return 0.0; } return (double) totalSteps / days; } public void addDailySteps(int steps) { days++; totalSteps += steps; if (steps &gt;= minActive) { activeDays++; } } } .",
-            "url": "https://samuelwaang.github.io/samuel/fastpages/cb/hw/2022/10/22/classes.html",
-            "relUrl": "/fastpages/cb/hw/2022/10/22/classes.html",
+            "url": "https://samuelwaang.github.io/samuel/fastpages/pbl/2022/10/22/classes.html",
+            "relUrl": "/fastpages/pbl/2022/10/22/classes.html",
             "date": " • Oct 22, 2022"
         }
         
