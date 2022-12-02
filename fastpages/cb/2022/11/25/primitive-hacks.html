@@ -234,6 +234,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>dividing with integer(also truncating): 0.0
+dividing with double: 0.8928571428571429
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -347,6 +362,22 @@ so a.concat() wouldn't work, but a = a.concat() would</li>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>20 20
+concat 20 and 2 together:  20 2
+concat a string and integer:  2020
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -442,6 +473,21 @@ We hope you learn something from it!</pre>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Both x and y are equal
+x and y are equal
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -475,6 +521,21 @@ We hope you learn something from it!</pre>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+true
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -522,6 +583,24 @@ Good for determining time efficiency in a Java code, good for reducing and impro
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>82
+99
+73
+76
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -542,7 +621,7 @@ Good for determining time efficiency in a Java code, good for reducing and impro
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Printing</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Samuel&quot;</span><span class="p">);</span>  
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team 10&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team 10&quot;</span><span class="p">);</span> <span class="c1">//simple printing</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -641,7 +720,7 @@ Team Oops is hot:true
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Samuel&quot;</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
-        <span class="kt">boolean</span> <span class="n">underclassman</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">underclassman</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//making variables and printing them</span>
         <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">age</span><span class="p">);</span>
@@ -761,7 +840,7 @@ false
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Num</span> <span class="p">{</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Double</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(((</span><span class="mf">6.0</span><span class="o">*</span><span class="mf">1234124.0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">11345.0</span><span class="o">-</span><span class="mf">890809.0</span><span class="o">+</span><span class="mf">90800.0</span><span class="p">))</span><span class="o">%</span><span class="mf">980098.0</span><span class="p">);</span>
+        <span class="n">Double</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(((</span><span class="mf">6.0</span><span class="o">*</span><span class="mf">1234124.0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">11345.0</span><span class="o">-</span><span class="mf">890809.0</span><span class="o">+</span><span class="mf">90800.0</span><span class="p">))</span><span class="o">%</span><span class="mf">980098.0</span><span class="p">);</span> <span class="c1">//the math function, using parentheses to make sure pemdas works well</span>
         <span class="n">num</span> <span class="o">=</span> <span class="n">num</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
     <span class="p">}</span>
@@ -812,7 +891,7 @@ false
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="o">+=</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="o">+=</span><span class="n">b</span><span class="p">);</span> <span class="c1">// a bunch of diferent math functions</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="o">-=</span><span class="n">b</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="o">*=</span><span class="n">b</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="o">/=</span><span class="n">b</span><span class="p">);</span>
@@ -928,11 +1007,11 @@ false
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">double</span> <span class="n">data</span> <span class="o">=</span> <span class="mf">123456.123456</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">data</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">data</span><span class="p">;</span> <span class="c1">//using casting to truncate</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
         
         <span class="c1">// int num = 678901234567890;</span>
-        <span class="c1">// System.out.println(num);</span>
+        <span class="c1">// System.out.println(num); this turns out to be an error</span>
 
     <span class="p">}</span>
 <span class="p">}</span>
