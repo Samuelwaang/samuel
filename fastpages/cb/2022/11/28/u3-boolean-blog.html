@@ -370,7 +370,18 @@ true
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>De morgan's law uses not (!) and shows what happens when using multiple operators with this</p>
+<h2 id="De-morgan's-Law">De morgan's Law<a class="anchor-link" href="#De-morgan's-Law"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>De morgan's law uses not (!) and shows what happens when using multiple operators with this</li>
+<li>the complement of the union of two sets A and B is equal to the intersection of the complement of the sets A and B</li>
+<li>!(a &amp;&amp; b) is equivalent to !a || !b</li>
+<li>!(a || b) is equivalent to !a &amp;&amp; !b</li>
+</ul>
 
 </div>
 </div>
@@ -410,6 +421,79 @@ true
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Compound-Boolean-Expression">Compound Boolean Expression<a class="anchor-link" href="#Compound-Boolean-Expression"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>this includes using the &amp;&amp;, ||, and ! operators, </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestNum</span>
+<span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
+     <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Score has an illegal value.&quot;</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Score is in the range 0-100&quot;</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;pick a different score&quot;</span><span class="p">);</span>
+     <span class="p">}</span>
+
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">TestNum</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Truth-Tables">Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>define boolean function by choosing value for each possible value of arguments, use truth table to do so</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/samuel/images/copied_from_nb/images/truthtables.PNG" alt="truthtable" title="truth table" /></p>
+
+</div>
+</div>
+</div>
 </div>
 
 
