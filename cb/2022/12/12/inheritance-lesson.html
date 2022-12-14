@@ -264,7 +264,7 @@ window.onload = wrap_img;
             <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//overrides the sound method, by printing woof instead of sound</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"woof"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -334,6 +334,9 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"sound"</span><span class="p">);</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the cat is dead: "</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span> <span class="c1">//method to be overloaded</span>
+    <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
     
         <span class="kd">protected</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span> 
@@ -347,7 +350,7 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"woof"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">//make  another subclass for Cat that extends off of Animal </span>
     
         <span class="kd">protected</span> <span class="n">String</span> <span class="n">breed</span><span class="p">;</span> 
         
@@ -356,13 +359,11 @@ window.onload = wrap_img;
             <span class="k">this</span><span class="p">.</span><span class="na">breed</span> <span class="o">=</span> <span class="n">breed</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//overrides the sound</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"meow"</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the cat is dead: "</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//method overloading</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the cat is dead: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
