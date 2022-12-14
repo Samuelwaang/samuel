@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -194,18 +194,18 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
-    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">mass</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">mass</span><span class="p">;</span> <span class="c1">//protected so the attribute isn't modified outside by outside modifiers</span>
     <span class="kd">protected</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//constructor with parameters of mass and lifespan</span>
         <span class="k">this</span><span class="p">.</span><span class="na">mass</span> <span class="o">=</span> <span class="n">mass</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">lifespan</span> <span class="o">=</span> <span class="n">lifespan</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">//extends superclass into dog subclass</span>
     
         <span class="kd">protected</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span> 
         
-        <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//another constructor</span>
             <span class="kd">super</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">lifespan</span><span class="p">);</span>
             <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
         <span class="p">}</span>
@@ -264,7 +264,7 @@ window.onload = wrap_img;
             <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//override</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"woof"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
