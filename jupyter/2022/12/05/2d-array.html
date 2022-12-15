@@ -124,38 +124,26 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Learning-Objective!">Learning Objective! </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Represent-collections-of-related-primitive-and-object-reference-data-using-two-dimensional-array-objects.">Represent collections of related primitive and object reference data using two dimensional array objects. </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#2D-Array-Vocab:">2D Array Vocab: </a></li>
-<li class="toc-entry toc-h2"><a href="#The-Basics:">The Basics: </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Initializing-a-Sample-Array:">Initializing a Sample Array: </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Some-Vocab:">Some Vocab: </a></li>
 <li class="toc-entry toc-h2"><a href="#Accessing-and-Updating-Elements-of-a-2D-Array:">Accessing and Updating Elements of a 2D Array: </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Hack-1:-Access-the-last-element-of-the-2D-Array-list:">Hack 1: Access the last element of the 2D Array list: </a></li>
 <li class="toc-entry toc-h3"><a href="#Hack-2:-Changing-a-Value:">Hack 2: Changing a Value: </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Nested-Loops,-Our-Beloved:">Nested Loops, Our Beloved: </a>
+<li class="toc-entry toc-h2"><a href="#Nested-Loops:">Nested Loops: </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Hack-3:-Unknown-Dimensions:">Hack 3: Unknown Dimensions: </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Searching-for-a-Value-in-a-2D-Array:">Searching for a Value in a 2D Array: </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Hack-4:-Finding-the-Min/Max-Value:">Hack 4: Finding the Min/Max Value: </a></li>
+<li class="toc-entry toc-h3"><a href="#enhanced-for-loop">enhanced for loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Hack-4">Hack 4 </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#HW!">HW! </a>
+<li class="toc-entry toc-h2"><a href="#HW-FRQ">HW FRQ </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-Google-Form,-which-also-has-a-few-2D-array-related-multiple-choice-questions.">Please submit screenshots of your 4 hacks up and running to our Google Form, which also has a few 2D array related multiple choice questions. </a></li>
-<li class="toc-entry toc-h4"><a href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form.">Additionally, Complete and send a screenshot of your code for 2017 FRQ Q4: Successor Array in that same google form. </a></li>
-<li class="toc-entry toc-h4"><a href="#Please-submit-as-a-pair-or-group.">Please submit as a pair or group. </a></li>
 <li class="toc-entry toc-h3"><a href="#4a">4a </a></li>
 <li class="toc-entry toc-h3"><a href="#4b">4b </a></li>
 </ul>
@@ -172,30 +160,14 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Learning-Objective!">
-<a class="anchor" href="#Learning-Objective!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objective!<a class="anchor-link" href="#Learning-Objective!"> </a>
-</h2>
-<h4 id="Represent-collections-of-related-primitive-and-object-reference-data-using-two-dimensional-array-objects.">
-<a class="anchor" href="#Represent-collections-of-related-primitive-and-object-reference-data-using-two-dimensional-array-objects." aria-hidden="true"><span class="octicon octicon-link"></span></a>Represent collections of related primitive and object reference data using two dimensional array objects.<a class="anchor-link" href="#Represent-collections-of-related-primitive-and-object-reference-data-using-two-dimensional-array-objects."> </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2D-Array-Vocab:">
-<a class="anchor" href="#2D-Array-Vocab:" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D Array Vocab:<a class="anchor-link" href="#2D-Array-Vocab:"> </a>
+<h2 id="Some-Vocab:">
+<a class="anchor" href="#Some-Vocab:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some Vocab:<a class="anchor-link" href="#Some-Vocab:"> </a>
 </h2>
 <ul>
-<li>
-<strong>Array</strong> = a data structure used to implement a collection (list) of primitive or object reference data</li>
-<li>
-<strong>Element</strong> = a single value in the array</li>
-<li>
-<strong>Index</strong> = the position of the element in the array (starts from 0)</li>
-<li>
-<strong>Array Length</strong> = the number of elements in the array<ul>
+<li>Array = a data structure used to implement a collection (list) of primitive or object reference data</li>
+<li>Element = a single value in the array</li>
+<li>Index = the position of the element in the array (starts from 0)</li>
+<li>Array Length = the number of elements in the array<ul>
 <li>Is public, so can be accessed in any class</li>
 <li>Is also final, so can’t change it after array has been created</li>
 </ul>
@@ -208,16 +180,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Basics:">
-<a class="anchor" href="#The-Basics:" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Basics:<a class="anchor-link" href="#The-Basics:"> </a>
-</h2>
 <ul>
-<li>A 2D array is an array of arrays, and can be a better way to store data</li>
-<li>Declaring a 2D array:<ul>
+<li>## Declaring a 2D array:<ul>
 <li><code>DataType[][] nameOf2DArray</code></li>
 </ul>
 </li>
-<li>Initializing a 2D array<ul>
+<li>## Initializing a 2D array<ul>
 <li>
 <code>DataType[][] nameOf2DArray = new DataType[r][c];</code><ul>
 <li>r = # of rows <ul>
@@ -236,62 +204,10 @@ window.onload = wrap_img;
 </ul>
 </li>
 </ul>
-<h3 id="Initializing-a-Sample-Array:">
-<a class="anchor" href="#Initializing-a-Sample-Array:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initializing a Sample Array:<a class="anchor-link" href="#Initializing-a-Sample-Array:"> </a>
-</h3>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
-
-   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-
-      <span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-         <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">},</span>
-         <span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span> <span class="p">},</span>
-         <span class="p">{</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span> <span class="p">}</span>
-      <span class="p">};</span>
-
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[0][0] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[1][2] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[2][1] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
-      
-   <span class="p">}</span>
-
-<span class="p">}</span>
-<span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>arr[0][0] = 1
-arr[2][0] = 6
-arr[2][1] = 8
-</pre>
-</div>
-</div>
 
 </div>
 </div>
-
 </div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -357,21 +273,6 @@ arr[2][1] = 8
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>a quick tip for the future: <code>list[list.length - 1][list[0].length - 1]</code>
-</li>
-<li>Updating an element:<ul>
-<li><code>list[r][c]  = value;</code></li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hack-2:-Changing-a-Value:">
 <a class="anchor" href="#Hack-2:-Changing-a-Value:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 2: Changing a Value:<a class="anchor-link" href="#Hack-2:-Changing-a-Value:"> </a>
 </h3>
@@ -397,7 +298,12 @@ arr[2][1] = 8
  
        <span class="c1">// Change Austin to Athens and print!</span>
        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Change Austin to Athens and print!"</span><span class="p">);</span>
-       
+      
+       <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="s">"Austin"</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s">"Athens"</span><span class="p">;</span>
+       <span class="p">}</span>
+
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
     <span class="p">}</span>
  
  <span class="p">}</span>
@@ -415,6 +321,7 @@ arr[2][1] = 8
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Change Austin to Athens and print!
+Athens
 </pre>
 </div>
 </div>
@@ -428,14 +335,11 @@ arr[2][1] = 8
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Nested-Loops,-Our-Beloved:">
-<a class="anchor" href="#Nested-Loops,-Our-Beloved:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loops, Our Beloved:<a class="anchor-link" href="#Nested-Loops,-Our-Beloved:"> </a>
+<h2 id="Nested-Loops:">
+<a class="anchor" href="#Nested-Loops:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loops:<a class="anchor-link" href="#Nested-Loops:"> </a>
 </h2>
 <ul>
-<li>You can use Nested Loops to traverse 2D Arrays<ul>
-<li>for example: to print out an entire array in order, you need to use these</li>
-</ul>
-</li>
+<li>to print out an array, use nested loop which is a for loop within another</li>
 </ul>
 
 </div>
@@ -452,13 +356,13 @@ arr[2][1] = 8
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
  
-      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//making a 2d array</span>
          <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">},</span>
          <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"k"</span> <span class="p">},</span>
          <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"j"</span> <span class="p">}</span>
       <span class="p">};</span>
  
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//nested for loop here, where the columns are printed by rows</span>
          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
          <span class="p">}</span>
@@ -497,13 +401,6 @@ c d i j
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Make sure your columns for loop is always inside your rows for loop!<ul>
-<li>Unless you want it printed the other way of course </li>
-</ul>
-</li>
-<li>Print spaces and lines in between to make a neater matrix</li>
-</ul>
 <h3 id="Hack-3:-Unknown-Dimensions:">
 <a class="anchor" href="#Hack-3:-Unknown-Dimensions:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 3: Unknown Dimensions:<a class="anchor-link" href="#Hack-3:-Unknown-Dimensions:"> </a>
 </h3>
@@ -527,7 +424,13 @@ c d i j
          <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
       <span class="p">};</span>
 
-      <span class="c1">// Print out the array without using numerical values!</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+         <span class="p">}</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+      <span class="p">}</span>
+      
       
    <span class="p">}</span>
 
@@ -536,6 +439,22 @@ c d i j
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Atlanta Baltimore Chicago  
+Australia Boston Cincinnati  
+Austin Beaumont Columbus  
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -548,8 +467,13 @@ c d i j
 <h2 id="Searching-for-a-Value-in-a-2D-Array:">
 <a class="anchor" href="#Searching-for-a-Value-in-a-2D-Array:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching for a Value in a 2D Array:<a class="anchor-link" href="#Searching-for-a-Value-in-a-2D-Array:"> </a>
 </h2>
+<h3 id="enhanced-for-loop">
+<a class="anchor" href="#enhanced-for-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>enhanced for loop<a class="anchor-link" href="#enhanced-for-loop"> </a>
+</h3>
 <ul>
-<li>Here's a quick example to illustrate:</li>
+<li>used to traverse through 2d arrays or collections, can only go up by 1 and only forward
+### .equals method</li>
+<li>checks if something is equal to another</li>
 </ul>
 
 </div>
@@ -574,9 +498,9 @@ c d i j
 
         <span class="n">String</span> <span class="n">match</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Boston"</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">row</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">row</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//for each or enhanced loop used</span>
             <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">item</span> <span class="p">:</span> <span class="n">row</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="p">{</span> <span class="c1">//.equals method to check if item is equal to name</span>
                     <span class="n">match</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
@@ -618,11 +542,8 @@ c d i j
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Note: in the code, you see the use of <code>:</code> which essentially means within.</li>
-</ul>
-<h3 id="Hack-4:-Finding-the-Min/Max-Value:">
-<a class="anchor" href="#Hack-4:-Finding-the-Min/Max-Value:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 4: Finding the Min/Max Value:<a class="anchor-link" href="#Hack-4:-Finding-the-Min/Max-Value:"> </a>
+<h3 id="Hack-4">
+<a class="anchor" href="#Hack-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 4<a class="anchor-link" href="#Hack-4"> </a>
 </h3>
 </div>
 </div>
@@ -636,35 +557,31 @@ c d i j
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-  
-        <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
-        <span class="p">};</span>
-        <span class="n">String</span> <span class="n">Largest</span><span class="o">=</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
+      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
+      <span class="p">};</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> 
-        <span class="p">{</span>
-          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-          <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">Largest</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-              <span class="n">Largest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="s">""</span><span class="p">;</span>
-            <span class="p">}</span>
-          
+      <span class="n">String</span> <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//loops through with nested for loop</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">longest</span><span class="p">.</span><span class="na">length</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//checks length if word, if longer then it replaces </span>
+                  <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+              <span class="p">}</span>
           <span class="p">}</span>
-        <span class="p">}</span>
+       <span class="p">}</span>
 
-        
+      
 
-        
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The Largest Number int the Array is :"</span><span class="o">+</span><span class="n">Largest</span><span class="p">);</span>
-        
-    <span class="p">}</span>
- 
- <span class="p">}</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Longest string: "</span> <span class="o">+</span> <span class="n">longest</span><span class="p">);</span>
+
+  <span class="p">}</span>
+
+<span class="p">}</span>
 <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
@@ -678,7 +595,7 @@ c d i j
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>AtlantaBaltimoreChicagoAustraliaBostonCincinnatiAustinBeaumontColumbusThe Largest Number int the Array is :Atlanta
+<pre>Longest string: Cincinnati
 </pre>
 </div>
 </div>
@@ -692,18 +609,9 @@ c d i j
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="HW!">
-<a class="anchor" href="#HW!" aria-hidden="true"><span class="octicon octicon-link"></span></a>HW!<a class="anchor-link" href="#HW!"> </a>
+<h2 id="HW-FRQ">
+<a class="anchor" href="#HW-FRQ" aria-hidden="true"><span class="octicon octicon-link"></span></a>HW FRQ<a class="anchor-link" href="#HW-FRQ"> </a>
 </h2>
-<h4 id="Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-Google-Form,-which-also-has-a-few-2D-array-related-multiple-choice-questions.">
-<a class="anchor" href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-Google-Form,-which-also-has-a-few-2D-array-related-multiple-choice-questions." aria-hidden="true"><span class="octicon octicon-link"></span></a>Please submit screenshots of your 4 hacks up and running to our <a href="https://forms.gle/J19yfg9h5Pcen4ka6">Google Form</a>, which also has a few 2D array related multiple choice questions.<a class="anchor-link" href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-Google-Form,-which-also-has-a-few-2D-array-related-multiple-choice-questions."> </a>
-</h4>
-<h4 id="Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form.">
-<a class="anchor" href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form." aria-hidden="true"><span class="octicon octicon-link"></span></a>Additionally, Complete and send a screenshot of your code for <code>2017 FRQ Q4: Successor Array</code> in that same google form.<a class="anchor-link" href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form."> </a>
-</h4>
-<h4 id="Please-submit-as-a-pair-or-group.">
-<a class="anchor" href="#Please-submit-as-a-pair-or-group." aria-hidden="true"><span class="octicon octicon-link"></span></a>Please submit as a pair or group.<a class="anchor-link" href="#Please-submit-as-a-pair-or-group."> </a>
-</h4>
 </div>
 </div>
 </div>
@@ -735,51 +643,6 @@ c d i j
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">void</span> <span class="nf">recurs</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">count</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">count</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">recount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-            <span class="n">recurs</span><span class="p">(</span><span class="n">recount</span><span class="p">);</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="n">recurs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public static void main(String[] args)</span><span class="ansi-black-intense-fg ansi-bold">() {</span>
-<span class="ansi-red-intense-fg ansi-bold">';' expected</span>
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
