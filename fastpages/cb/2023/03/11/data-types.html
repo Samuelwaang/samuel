@@ -76,6 +76,7 @@
 <ul>
 <li>The IntByReference class uses the integer primitive and its function is swapping the two inputted numbers, if the first is greater than the second</li>
 <li>A wrapper class is used to change a primitive int into an Integer object</li>
+<li>the Integer object is turned back into a primitive type "tmp" to switch values</li>
 </ul>
 
 </div>
@@ -101,7 +102,9 @@
     <span class="p">}</span>
     <span class="c1">// function to swap the values</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swapToLowHighOrder</span><span class="p">(</span><span class="n">IntByReference</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// if first value larger than second, then swap</span>
         <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">.</span><span class="na">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//sets the first value back to a primitive type</span>
             <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
             <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
             <span class="n">i</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
@@ -112,7 +115,7 @@
         <span class="n">IntByReference</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IntByReference</span><span class="p">(</span><span class="n">n0</span><span class="p">);</span> <span class="c1">// creates objects with wrapper class using primitive int</span>
         <span class="n">IntByReference</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IntByReference</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Before: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
-        <span class="n">a</span><span class="p">.</span><span class="na">swapToLowHighOrder</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="c1">//calls function</span>
+        <span class="n">a</span><span class="p">.</span><span class="na">swapToLowHighOrder</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="c1">//calls method</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
     <span class="p">}</span>
