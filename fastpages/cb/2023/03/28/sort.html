@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -189,13 +189,13 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">()</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">T</span> <span class="n">key</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">T</span> <span class="n">key</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// assigns element to key</span>
             <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//checks if j value is greater than key, if it is then the element at j is moved to the right</span>
                 <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">));</span>
-                <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">--</span><span class="p">;</span> <span class="c1">// goes back to continue comparing key</span>
             <span class="p">}</span>
-            <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+            <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span> <span class="c1">//puts key at correct spot, sets value of j+1 to value of key, puts key in correct position</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
