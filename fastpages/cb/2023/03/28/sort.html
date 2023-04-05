@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -142,7 +142,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bubble-Sorting">Bubble Sorting<a class="anchor-link" href="#Bubble-Sorting"> </a></h2>
+<h2 id="Bubble-and-Insertion-Sorting">Bubble and Insertion Sorting<a class="anchor-link" href="#Bubble-and-Insertion-Sorting"> </a></h2>
 </div>
 </div>
 </div>
@@ -153,13 +153,15 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericTQueue</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="c1">// extends generic interface comparable&lt;t&gt;</span>
+<span class="kd">class</span> <span class="nc">TQueue</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
-
-    <span class="kd">public</span> <span class="nf">GenericTQueue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// initializes the items variable to a new ArrayList</span>
+    <span class="kd">public</span> <span class="nf">TQueue</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">items</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
     <span class="p">}</span>
-
+    <span class="c1">//adds elements</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">items</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
     <span class="p">}</span>
@@ -170,12 +172,12 @@ window.onload = wrap_img;
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">items</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
     <span class="p">}</span>
-
+    <span class="c1">//bubblesort function that compares elements next to each other, if the first element is greater than the second, then swap</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">()</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//use compareTo to compare 2 elements</span>
                     <span class="n">T</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
                     <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
                     <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
@@ -183,162 +185,98 @@ window.onload = wrap_img;
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
-        <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
     
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericTQueue</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
-
-    <span class="kd">public</span> <span class="nf">GenericTQueue</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">items</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">items</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="n">T</span> <span class="nf">dequeue</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">items</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">()</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">T</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
-                    <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-                    <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
-                <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">T</span> <span class="n">key</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">));</span>
+                <span class="n">j</span><span class="o">--</span><span class="p">;</span>
             <span class="p">}</span>
+            <span class="n">items</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
+
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&quot;[]&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
         <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
         <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
-            <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">item</span> <span class="p">:</span> <span class="n">items</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+            <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
         <span class="p">}</span>
+        <span class="n">sb</span><span class="p">.</span><span class="na">setLength</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
         <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span>
         <span class="k">return</span> <span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">QueueTester</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// Create iterable Queue of Words</span>
-        <span class="n">String</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span> <span class="s">&quot;seven&quot;</span><span class="p">,</span> <span class="s">&quot;slimy&quot;</span><span class="p">,</span> <span class="s">&quot;snakes&quot;</span><span class="p">,</span> <span class="s">&quot;sallying&quot;</span><span class="p">,</span> <span class="s">&quot;slowly&quot;</span><span class="p">,</span> <span class="s">&quot;slithered&quot;</span><span class="p">,</span> <span class="s">&quot;southward&quot;</span><span class="p">};</span>
-        <span class="n">Queue</span> <span class="n">qWords</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&quot;Words&quot;</span><span class="p">,</span> <span class="n">words</span><span class="p">);</span>
-        <span class="n">qWords</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
-        
-        
-        <span class="c1">// Create iterable Queue of Integers</span>
-        <span class="n">Integer</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
-        <span class="n">Queue</span> <span class="n">qNums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&quot;Integers&quot;</span><span class="p">,</span> <span class="n">numbers</span> <span class="p">);</span>
-        <span class="n">qNums</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TQueue</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Generic T Queue</span>
+        <span class="n">GenericTQueue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericTQueue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 
        
-        <span class="c1">// Create iterable Queue of NCS Collectable</span>
-        <span class="n">Animal</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Animal</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
-        <span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">);</span>
-        <span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Cupcake</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
-        <span class="c1">// Illustrates use of a series of repeating arguments</span>
-        <span class="n">Queue</span> <span class="n">qCollect</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&quot;Collectable&quot;</span><span class="p">,</span>
-                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
-                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
-                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
-        <span class="p">);</span>
-        <span class="n">qCollect</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Before: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+     
+        <span class="n">queue</span><span class="p">.</span><span class="na">bubbleSort</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bubble Sorting&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 
 
-        <span class="c1">// Create iterable Queue of Mixed types of data</span>
-        <span class="n">Queue</span> <span class="n">qMix</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&quot;Mixed&quot;</span><span class="p">);</span>
-        <span class="n">qMix</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Start&quot;</span><span class="p">);</span>
-        <span class="n">qMix</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span>
-                <span class="n">words</span><span class="p">,</span>
-                <span class="n">numbers</span><span class="p">,</span>
-                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
-                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
-                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
-        <span class="p">);</span>
-        <span class="n">qMix</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;End&quot;</span><span class="p">);</span>
-        <span class="n">qMix</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insertion Sorting&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">insertionSort</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After sorting: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">QueueTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="n">TQueue</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before: [3, 1, 4, 1, 5, 9, 2, 6, 5]
+Bubble Sorting
+After: [1, 1, 2, 3, 4, 5, 5, 6, 9]
+Insertion Sorting
+After sorting: [1, 1, 2, 3, 4, 5, 5, 6, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Selection-Sorting">Selection Sorting<a class="anchor-link" href="#Selection-Sorting"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Insertion-Sorting">Insertion Sorting<a class="anchor-link" href="#Insertion-Sorting"> </a></h2>
-</div>
-</div>
-</div>
 </div>
 
 
