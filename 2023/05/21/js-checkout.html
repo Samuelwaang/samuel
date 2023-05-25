@@ -171,6 +171,72 @@ BEARER_TOKEN = AAAAAAAAAAAAAAAAAAAAAIq6ngEAAAAAbmvRyAEqSlskAamjIl283r1e4B0%3D8HH
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
+<span class="kr">const</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+	<span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://twitter135.p.rapidapi.com/Search/?q=Dogecoin&amp;count=3&#39;</span><span class="p">,</span>
+	<span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+	<span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+		<span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;twitter135.p.rapidapi.com&#39;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="556b4dda-2f82-468b-9efb-56f0b849db48"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#556b4dda-2f82-468b-9efb-56f0b849db48');
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://twitter135.p.rapidapi.com/Search/?q=Dogecoin&count=3',
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
+		'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
