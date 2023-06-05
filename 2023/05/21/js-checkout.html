@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      3 min read
     
 </span></p>
 
@@ -173,10 +173,10 @@ window.onload = wrap_img;
 
 
 
-<div id="3242127c-85ca-4e34-bfdf-ac6a1d2ccb79"></div>
+<div id="a83c8c28-b603-4c19-8495-2c4542d5cc56"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#3242127c-85ca-4e34-bfdf-ac6a1d2ccb79');
+var element = $('#a83c8c28-b603-4c19-8495-2c4542d5cc56');
 const settings = {
 	async: true,
 	crossDomain: true,
@@ -252,10 +252,10 @@ $.ajax(settings).done(function (response) {
 
 
 
-<div id="eb8ea4ad-d413-456b-98e3-0ad167ca8c17"></div>
+<div id="d5c6b001-9c07-4264-af52-0991e2e24a13"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#eb8ea4ad-d413-456b-98e3-0ad167ca8c17');
+var element = $('#d5c6b001-9c07-4264-af52-0991e2e24a13');
 const settings = {
 	async: true,
 	crossDomain: true,
@@ -325,10 +325,10 @@ $.ajax(settings).done(function (response) {
 
 
 
-<div id="7d971629-9099-404f-bdae-bb6095fd079e"></div>
+<div id="c177ce99-4fcb-44f6-8381-6ac1941f72e1"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#7d971629-9099-404f-bdae-bb6095fd079e');
+var element = $('#c177ce99-4fcb-44f6-8381-6ac1941f72e1');
 const settings = {
 	async: true,
 	crossDomain: true,
@@ -357,7 +357,7 @@ $.ajax(settings).done(function (response) {
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>can incorporate chatgpt by asking it the social media handles of someone</p>
+<p>Incorporates twitter api, instagram api, and chatgpt api to output into table the last posts by a user on twitter and instagram</p>
 
 </div>
 </div>
@@ -371,323 +371,45 @@ $.ajax(settings).done(function (response) {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
 
-    <span class="kr">class</span> <span class="nx">getContent</span> <span class="p">{</span>
-      <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">twname</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">igname</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">tw1</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">tw2</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">tw3</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">ig1</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">ig2</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="kd">function</span> <span class="nx">createTable</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">tableData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
 
-      <span class="nx">twitter</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
-        <span class="kr">const</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span> <span class="c1">//capture instance of class</span>
-        <span class="kr">const</span> <span class="nx">settingsgpt</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://chatgpt53.p.rapidapi.com/&#39;</span><span class="p">,</span>
-          <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-          <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s1">&#39;content-type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;2435800a00msh4d3180883022e4bp1fc741jsnfc4d356a5448&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;chatgpt53.p.rapidapi.com&#39;</span>
-          <span class="p">},</span>
-          <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{\r\n    &quot;messages&quot;: [\r\n        {\r\n            &quot;role&quot;: &quot;user&quot;,\r\n            &quot;content&quot;: &quot;Please just return the twitter handle of &#39;</span> <span class="o">+</span> <span class="nx">user</span> <span class="o">+</span> <span class="s1">&#39;without the @ &quot;\r\n        }\r\n    ]\r\n}&#39;</span>
-        <span class="p">};</span>
-
-        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsgpt</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-          <span class="kd">var</span> <span class="nx">twitname</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">twname</span> <span class="o">=</span> <span class="nx">twitname</span><span class="p">;</span>
-
-          <span class="kr">const</span> <span class="nx">settingsid</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://twitter135.p.rapidapi.com/v2/UserByScreenName/?username=&#39;</span> <span class="o">+</span> <span class="nx">twitname</span><span class="p">,</span>
-            <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
-            <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-              <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;2435800a00msh4d3180883022e4bp1fc741jsnfc4d356a5448&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;twitter135.p.rapidapi.com&#39;</span>
-            <span class="p">}</span>
-          <span class="p">};</span>
-
-          <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsid</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">twitid</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">rest_id</span><span class="p">;</span>
-
-            <span class="kr">const</span> <span class="nx">settingstwit</span> <span class="o">=</span> <span class="p">{</span>
-              <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-              <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-              <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://twitter135.p.rapidapi.com/v2/UserTweets/?id=&#39;</span> <span class="o">+</span> <span class="nx">twitid</span> <span class="o">+</span> <span class="s1">&#39;&amp;count=3&#39;</span><span class="p">,</span>
-              <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
-              <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;twitter135.p.rapidapi.com&#39;</span>
-              <span class="p">}</span>
-            <span class="p">};</span>
-
-            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingstwit</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-              <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kr">const</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">timeline_v2</span><span class="p">.</span><span class="nx">timeline</span><span class="p">.</span><span class="nx">instructions</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">entries</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">content</span><span class="p">.</span><span class="nx">itemContent</span><span class="p">.</span><span class="nx">tweet_results</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">legacy</span><span class="p">.</span><span class="nx">full_text</span><span class="p">;</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="k">this</span><span class="p">.</span><span class="nx">tw1</span> <span class="o">=</span> <span class="nx">tweet</span><span class="p">;</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="k">this</span><span class="p">.</span><span class="nx">tw2</span> <span class="o">=</span> <span class="nx">tweet</span><span class="p">;</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="k">this</span><span class="p">.</span><span class="nx">tw3</span> <span class="o">=</span> <span class="nx">tweet</span><span class="p">;</span>
-                <span class="p">}</span>
-              <span class="p">}</span>
-            <span class="p">});</span>
-          <span class="p">});</span>
-        <span class="p">});</span>
-      <span class="p">}</span>
-
-      <span class="nx">instagram</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-        <span class="kr">const</span> <span class="nx">settingsgpt</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://chatgpt53.p.rapidapi.com/&#39;</span><span class="p">,</span>
-          <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-          <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s1">&#39;content-type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;chatgpt53.p.rapidapi.com&#39;</span>
-          <span class="p">},</span>
-          <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{\r\n    &quot;messages&quot;: [\r\n        {\r\n            &quot;role&quot;: &quot;user&quot;,\r\n            &quot;content&quot;: &quot;Please just return the instagram handle of &#39;</span> <span class="o">+</span> <span class="nx">user</span> <span class="o">+</span> <span class="s1">&#39;without the @ &quot;\r\n        }\r\n    ]\r\n}&#39;</span>
-        <span class="p">};</span>
-
-        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsgpt</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-          <span class="kd">var</span> <span class="nx">igname</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">igname</span> <span class="o">=</span> <span class="nx">igname</span><span class="p">;</span>
-
-          <span class="kr">const</span> <span class="nx">settingspost</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://instagram-scraper-2022.p.rapidapi.com/ig/posts_username/?user=&#39;</span> <span class="o">+</span> <span class="nx">igname</span><span class="p">,</span>
-            <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
-            <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-              <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;instagram-scraper-2022.p.rapidapi.com&#39;</span>
-            <span class="p">}</span>
-          <span class="p">};</span>
-
-          <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingspost</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-              <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kr">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">edge_owner_to_timeline_media</span><span class="p">.</span><span class="nx">edges</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">node</span><span class="p">.</span><span class="nx">thumbnail_src</span><span class="p">;</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="k">this</span><span class="p">.</span><span class="nx">ig1</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="k">this</span><span class="p">.</span><span class="nx">ig2</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
-                <span class="p">}</span>
-              <span class="p">}</span>
-          <span class="p">});</span>
-        <span class="p">});</span>
-      <span class="p">}</span>
-      <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="k">typeof</span> <span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
-        <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
-        <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
-      <span class="p">}</span>
+  <span class="kr">const</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">);</span>
+  <span class="nx">table</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderCollapse</span> <span class="o">=</span> <span class="s1">&#39;collapse&#39;</span><span class="p">;</span>
 
 
-      <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">thead</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">headerRow</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">);</span>
 
-        <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">tableData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">th</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">);</span>
+    <span class="nx">th</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="s1">&#39;1px solid black&#39;</span><span class="p">;</span>
+    <span class="nx">th</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
+    <span class="nx">headerRow</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">th</span><span class="p">);</span>
+  <span class="p">}</span>
 
-        <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Person object in JSON &lt;br&gt;&quot;</span><span class="p">);</span>
-        <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>  
-
-      <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">getContent</span><span class="p">();</span>
-    <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Elon Musk&quot;</span><span class="p">;</span>
-    <span class="nx">user</span><span class="p">.</span><span class="nx">twitter</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">user</span><span class="p">.</span><span class="nx">instagram</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">user</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
+  <span class="nx">thead</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">headerRow</span><span class="p">);</span>
+  <span class="nx">table</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">thead</span><span class="p">);</span>
 
 
+  <span class="kr">const</span> <span class="nx">tbody</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;tbody&#39;</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">dataRow</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">tableData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">td</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">);</span>
+    <span class="nx">td</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="s1">&#39;1px solid black&#39;</span><span class="p">;</span>
+    <span class="nx">td</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">tableData</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="nx">dataRow</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">td</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">tbody</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dataRow</span><span class="p">);</span>
+  <span class="nx">table</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tbody</span><span class="p">);</span>
 
 
-<div id="e4e1043d-be1e-48e6-998c-fe27810ca6e2"></div>
-<div class="output_subarea output_javascript ">
-<script type="text/javascript">
-var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
-
-    class getContent {
-      constructor() {
-        this.user;
-        this.twname;
-        this.igname;
-        this.tw1;
-        this.tw2;
-        this.tw3;
-        this.ig1;
-        this.ig2;
-      }
-
-      twitter(user) {
-        this.user = user;
-        const self = this; //capture instance of class
-        const settingsgpt = {
-          async: true,
-          crossDomain: true,
-          url: 'https://chatgpt53.p.rapidapi.com/',
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            'X-RapidAPI-Key': '2435800a00msh4d3180883022e4bp1fc741jsnfc4d356a5448',
-            'X-RapidAPI-Host': 'chatgpt53.p.rapidapi.com'
-          },
-          processData: false,
-          data: '{\r\n    "messages": [\r\n        {\r\n            "role": "user",\r\n            "content": "Please just return the twitter handle of ' + user + 'without the @ "\r\n        }\r\n    ]\r\n}'
-        };
-
-        $.ajax(settingsgpt).done(function (response) {
-          var twitname = response.choices[0].message.content;
-          this.twname = twitname;
-
-          const settingsid = {
-            async: true,
-            crossDomain: true,
-            url: 'https://twitter135.p.rapidapi.com/v2/UserByScreenName/?username=' + twitname,
-            method: 'GET',
-            headers: {
-              'X-RapidAPI-Key': '2435800a00msh4d3180883022e4bp1fc741jsnfc4d356a5448',
-              'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
-            }
-          };
-
-          $.ajax(settingsid).done(function (response) {
-            var twitid = response.data.user.result.rest_id;
-
-            const settingstwit = {
-              async: true,
-              crossDomain: true,
-              url: 'https://twitter135.p.rapidapi.com/v2/UserTweets/?id=' + twitid + '&count=3',
-              method: 'GET',
-              headers: {
-                'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
-                'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
-              }
-            };
-
-            $.ajax(settingstwit).done(function (response) {
-              for (let i = 0; i < 3; i++) {
-                const tweet = response.data.user.result.timeline_v2.timeline.instructions[1].entries[i].content.itemContent.tweet_results.result.legacy.full_text;
-                if (i === 0) {
-                  this.tw1 = tweet;
-                } else if (i === 1) {
-                  this.tw2 = tweet;
-                } else if (i === 2) {
-                  this.tw3 = tweet;
-                }
-              }
-            });
-          });
-        });
-      }
-
-      instagram(user) {
-        const self = this;
-        const settingsgpt = {
-          async: true,
-          crossDomain: true,
-          url: 'https://chatgpt53.p.rapidapi.com/',
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
-            'X-RapidAPI-Host': 'chatgpt53.p.rapidapi.com'
-          },
-          processData: false,
-          data: '{\r\n    "messages": [\r\n        {\r\n            "role": "user",\r\n            "content": "Please just return the instagram handle of ' + user + 'without the @ "\r\n        }\r\n    ]\r\n}'
-        };
-
-        $.ajax(settingsgpt).done(function (response) {
-          var igname = response.choices[0].message.content;
-          this.igname = igname;
-
-          const settingspost = {
-            async: true,
-            crossDomain: true,
-            url: 'https://instagram-scraper-2022.p.rapidapi.com/ig/posts_username/?user=' + igname,
-            method: 'GET',
-            headers: {
-              'X-RapidAPI-Key': 'ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49',
-              'X-RapidAPI-Host': 'instagram-scraper-2022.p.rapidapi.com'
-            }
-          };
-
-          $.ajax(settingspost).done(function (response) {
-              for (let i = 0; i < 2; i++) {
-                const post = response.data.user.edge_owner_to_timeline_media.edges[i].node.thumbnail_src;
-                if (i === 0) {
-                  this.ig1 = post;
-                } else if (i === 1) {
-                  this.ig2 = post;
-                }
-              }
-          });
-        });
-      }
-      getJSON() {
-        const obj = {type: typeof this, name: this.name, ghID: this.ghID, classOf: this.classOf, role: this.role};
-        const json = JSON.stringify(obj);
-        return json;
-      }
+  <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">table</span><span class="p">);</span>
+<span class="p">}</span>
 
 
-      logIt() {
-
-        console.info(this);
-
-        element.append("Person object in JSON <br>");
-        element.append(this.getJSON() + "<br>");  
-
-      }
-    }
-
-    const user = new getContent();
-    const name = "Elon Musk";
-    user.twitter(name);
-    user.instagram(name);
-    user.logIt();
-
-</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
 <span class="kr">class</span> <span class="nx">getContent</span> <span class="p">{</span>
   <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
@@ -702,7 +424,8 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
 
   <span class="nx">twitter</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span> <span class="c1">//capture instance of class</span>
+    <span class="kr">const</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span> 
+
     <span class="kr">const</span> <span class="nx">settingsgpt</span> <span class="o">=</span> <span class="p">{</span>
       <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="nx">crossDomain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -710,7 +433,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
       <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
       <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
         <span class="s1">&#39;content-type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1&#39;</span><span class="p">,</span>
         <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;chatgpt53.p.rapidapi.com&#39;</span>
       <span class="p">},</span>
       <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -720,6 +443,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
     <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsgpt</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
       <span class="kd">var</span> <span class="nx">twitname</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
       <span class="nx">self</span><span class="p">.</span><span class="nx">twname</span> <span class="o">=</span> <span class="nx">twitname</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">twitname</span><span class="p">);</span>
 
       <span class="kr">const</span> <span class="nx">settingsid</span> <span class="o">=</span> <span class="p">{</span>
         <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -727,13 +451,14 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
         <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://twitter135.p.rapidapi.com/v2/UserByScreenName/?username=&#39;</span> <span class="o">+</span> <span class="nx">twitname</span><span class="p">,</span>
         <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
         <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1&#39;</span><span class="p">,</span>
           <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;twitter135.p.rapidapi.com&#39;</span>
         <span class="p">}</span>
       <span class="p">};</span>
 
       <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsid</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">twitid</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">rest_id</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">twitid</span><span class="p">);</span>
 
         <span class="kr">const</span> <span class="nx">settingstwit</span> <span class="o">=</span> <span class="p">{</span>
           <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -741,7 +466,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
           <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://twitter135.p.rapidapi.com/v2/UserTweets/?id=&#39;</span> <span class="o">+</span> <span class="nx">twitid</span> <span class="o">+</span> <span class="s1">&#39;&amp;count=3&#39;</span><span class="p">,</span>
           <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
           <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1&#39;</span><span class="p">,</span>
             <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;twitter135.p.rapidapi.com&#39;</span>
           <span class="p">}</span>
         <span class="p">};</span>
@@ -751,6 +476,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
             <span class="kr">const</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">timeline_v2</span><span class="p">.</span><span class="nx">timeline</span><span class="p">.</span><span class="nx">instructions</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">entries</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">content</span><span class="p">.</span><span class="nx">itemContent</span><span class="p">.</span><span class="nx">tweet_results</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">legacy</span><span class="p">.</span><span class="nx">full_text</span><span class="p">;</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
               <span class="nx">self</span><span class="p">.</span><span class="nx">tw1</span> <span class="o">=</span> <span class="nx">tweet</span><span class="p">;</span>
+              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tweet</span><span class="p">);</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
               <span class="nx">self</span><span class="p">.</span><span class="nx">tw2</span> <span class="o">=</span> <span class="nx">tweet</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
@@ -771,7 +497,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
       <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
       <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
         <span class="s1">&#39;content-type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1&#39;</span><span class="p">,</span>
         <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;chatgpt53.p.rapidapi.com&#39;</span>
       <span class="p">},</span>
       <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -781,6 +507,7 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
     <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingsgpt</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
       <span class="kd">var</span> <span class="nx">igname</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
       <span class="nx">self</span><span class="p">.</span><span class="nx">igname</span> <span class="o">=</span> <span class="nx">igname</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">igname</span><span class="p">);</span>
 
       <span class="kr">const</span> <span class="nx">settingspost</span> <span class="o">=</span> <span class="p">{</span>
         <span class="k">async</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -788,24 +515,26 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
         <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://instagram-scraper-2022.p.rapidapi.com/ig/posts_username/?user=&#39;</span> <span class="o">+</span> <span class="nx">igname</span><span class="p">,</span>
         <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
         <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;X-RapidAPI-Key&#39;</span><span class="o">:</span> <span class="s1">&#39;95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1&#39;</span><span class="p">,</span>
           <span class="s1">&#39;X-RapidAPI-Host&#39;</span><span class="o">:</span> <span class="s1">&#39;instagram-scraper-2022.p.rapidapi.com&#39;</span>
         <span class="p">}</span>
       <span class="p">};</span>
 
       <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settingspost</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kr">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">edge_owner_to_timeline_media</span><span class="p">.</span><span class="nx">edges</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">node</span><span class="p">.</span><span class="nx">thumbnail_src</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-              <span class="nx">self</span><span class="p">.</span><span class="nx">ig1</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-              <span class="nx">self</span><span class="p">.</span><span class="nx">ig2</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
-            <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kr">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">edge_owner_to_timeline_media</span><span class="p">.</span><span class="nx">edges</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">node</span><span class="p">.</span><span class="nx">thumbnail_src</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">ig1</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">ig1</span><span class="p">);</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">ig2</span> <span class="o">=</span> <span class="nx">post</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">ig2</span><span class="p">);</span>
           <span class="p">}</span>
+        <span class="p">}</span>
       <span class="p">});</span>
     <span class="p">});</span>
   <span class="p">}</span>
-  
+
   <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
       <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">,</span>
@@ -817,33 +546,23 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
       <span class="nx">instagrampost1</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ig1</span><span class="p">,</span>
       <span class="nx">instagrampost2</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ig2</span>
     <span class="p">};</span>
-    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="mf">2</span><span class="p">);</span> <span class="c1">// Add indentation for better readability</span>
+    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-    
-    <span class="c1">//Person Object</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-
-    <span class="c1">// Create a new HTML element to display the output</span>
-    <span class="kr">const</span> <span class="nx">outputElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
-    <span class="nx">outputElement</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span><span class="p">;</span>
-
-    <span class="c1">// Append the JSON output to the element</span>
-    <span class="nx">outputElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;pre&gt;&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
-
-    <span class="c1">// Display the element in the Jupyter Notebook output area</span>
-    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">outputElement</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
+
 <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">getContent</span><span class="p">();</span>
-<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Elon Musk&quot;</span><span class="p">;</span>
-<span class="nx">user</span><span class="p">.</span><span class="nx">twitter</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-<span class="nx">user</span><span class="p">.</span><span class="nx">instagram</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-<span class="nx">user</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">nameuser</span> <span class="o">=</span> <span class="s1">&#39;hillary clinton&#39;</span><span class="p">;</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">twitter</span><span class="p">(</span><span class="nx">nameuser</span><span class="p">);</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">instagram</span><span class="p">(</span><span class="nx">nameuser</span><span class="p">);</span>
+
+<span class="c1">// wait for ajax requests to finish</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">();</span>
+  <span class="nx">createTable</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
+<span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -858,10 +577,50 @@ var element = $('#e4e1043d-be1e-48e6-998c-fe27810ca6e2');
 
 
 
-<div id="70c0abbb-30e3-4eb5-9ea1-cf8d58b4d325"></div>
+<div id="554ce4f2-295b-4ae3-995c-1730ff57025f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#70c0abbb-30e3-4eb5-9ea1-cf8d58b4d325');
+var element = $('#554ce4f2-295b-4ae3-995c-1730ff57025f');
+
+function createTable(jsonData) {
+  const tableData = JSON.parse(jsonData);
+
+  const table = document.createElement('table');
+  table.style.borderCollapse = 'collapse';
+
+
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+
+  for (const key in tableData) {
+    const th = document.createElement('th');
+    th.style.border = '1px solid black';
+    th.textContent = key;
+    headerRow.appendChild(th);
+  }
+
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+
+  const tbody = document.createElement('tbody');
+  const dataRow = document.createElement('tr');
+
+  for (const key in tableData) {
+    const td = document.createElement('td');
+    td.style.border = '1px solid black';
+    td.textContent = tableData[key];
+    dataRow.appendChild(td);
+  }
+
+  tbody.appendChild(dataRow);
+  table.appendChild(tbody);
+
+
+  element.append(table);
+}
+
+
 class getContent {
   constructor() {
     this.user;
@@ -876,7 +635,8 @@ class getContent {
 
   twitter(user) {
     this.user = user;
-    const self = this; //capture instance of class
+    const self = this; 
+
     const settingsgpt = {
       async: true,
       crossDomain: true,
@@ -884,7 +644,7 @@ class getContent {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': 'ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49',
+        'X-RapidAPI-Key': '95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1',
         'X-RapidAPI-Host': 'chatgpt53.p.rapidapi.com'
       },
       processData: false,
@@ -894,6 +654,7 @@ class getContent {
     $.ajax(settingsgpt).done(function (response) {
       var twitname = response.choices[0].message.content;
       self.twname = twitname;
+      console.log(twitname);
 
       const settingsid = {
         async: true,
@@ -901,13 +662,14 @@ class getContent {
         url: 'https://twitter135.p.rapidapi.com/v2/UserByScreenName/?username=' + twitname,
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49',
+          'X-RapidAPI-Key': '95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1',
           'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
         }
       };
 
       $.ajax(settingsid).done(function (response) {
         var twitid = response.data.user.result.rest_id;
+        console.log(twitid);
 
         const settingstwit = {
           async: true,
@@ -915,7 +677,7 @@ class getContent {
           url: 'https://twitter135.p.rapidapi.com/v2/UserTweets/?id=' + twitid + '&count=3',
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49',
+            'X-RapidAPI-Key': '95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1',
             'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
           }
         };
@@ -925,6 +687,7 @@ class getContent {
             const tweet = response.data.user.result.timeline_v2.timeline.instructions[1].entries[i].content.itemContent.tweet_results.result.legacy.full_text;
             if (i === 0) {
               self.tw1 = tweet;
+              console.log(tweet);
             } else if (i === 1) {
               self.tw2 = tweet;
             } else if (i === 2) {
@@ -945,7 +708,7 @@ class getContent {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': 'befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12',
+        'X-RapidAPI-Key': '95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1',
         'X-RapidAPI-Host': 'chatgpt53.p.rapidapi.com'
       },
       processData: false,
@@ -955,6 +718,7 @@ class getContent {
     $.ajax(settingsgpt).done(function (response) {
       var igname = response.choices[0].message.content;
       self.igname = igname;
+      console.log(igname);
 
       const settingspost = {
         async: true,
@@ -962,24 +726,26 @@ class getContent {
         url: 'https://instagram-scraper-2022.p.rapidapi.com/ig/posts_username/?user=' + igname,
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'ae2550d596mshf941e95cd29b8a4p159aa5jsn3e9edb250f49',
+          'X-RapidAPI-Key': '95853c1888msh0a1187e38da6414p1f7d65jsn31e03536f2e1',
           'X-RapidAPI-Host': 'instagram-scraper-2022.p.rapidapi.com'
         }
       };
 
       $.ajax(settingspost).done(function (response) {
-          for (let i = 0; i < 2; i++) {
-            const post = response.data.user.edge_owner_to_timeline_media.edges[i].node.thumbnail_src;
-            if (i === 0) {
-              self.ig1 = post;
-            } else if (i === 1) {
-              self.ig2 = post;
-            }
+        for (let i = 0; i < 2; i++) {
+          const post = response.data.user.edge_owner_to_timeline_media.edges[i].node.thumbnail_src;
+          if (i === 0) {
+            self.ig1 = post;
+            console.log(self.ig1);
+          } else if (i === 1) {
+            self.ig2 = post;
+            console.log(self.ig2);
           }
+        }
       });
     });
   }
-  
+
   getJSON() {
     const obj = {
       name: this.user,
@@ -991,33 +757,23 @@ class getContent {
       instagrampost1: this.ig1,
       instagrampost2: this.ig2
     };
-    const json = JSON.stringify(obj, null, 2); // Add indentation for better readability
+    const json = JSON.stringify(obj);
     return json;
-  }
-  
-  logIt() {
-    const self = this;
-    
-    //Person Object
-    console.info(this);
-
-    // Create a new HTML element to display the output
-    const outputElement = document.createElement('div');
-    outputElement.id = 'output';
-
-    // Append the JSON output to the element
-    outputElement.innerHTML = '<pre>' + this.getJSON() + '</pre>';
-
-    // Display the element in the Jupyter Notebook output area
-    element.append(outputElement);
   }
 }
 
+
 const user = new getContent();
-const name = "Elon Musk";
-user.twitter(name);
-user.instagram(name);
-user.logIt();
+
+const nameuser = 'hillary clinton';
+user.twitter(nameuser);
+user.instagram(nameuser);
+
+// wait for ajax requests to finish
+setTimeout(function () {
+  const jsonData = user.getJSON();
+  createTable(jsonData);
+}, 5000);
 
 </script>
 </div>
